@@ -100,9 +100,9 @@ BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
 # CMHW
 BOARD_USES_CYANOGEN_HARDWARE := true
-BOARD_HARDWARE_CLASS += \
-	hardware/samsung/lineagehw \
-	$(LOCAL_PATH)/lineagehw
+JAVA_SOURCE_OVERLAYS += \
+	org.lineageos.hardware|hardware/samsung/lineagehw|**/*.java \
+	org.lineageos.hardware|$(LOCAL_PATH)/lineagehw|**/*.java
 
 # Display
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
